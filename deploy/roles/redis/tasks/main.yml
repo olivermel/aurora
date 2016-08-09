@@ -11,12 +11,12 @@
   tags:
     - redis
 
-- name: Install the Redis package
-  yum: 
-   name: redis  
-   state: present
-  tags:
-    - redis
+#- name: Install the Redis package
+#  yum: 
+#   name: redis  
+#   state: present
+#  tags:
+#    - redis
 
 - name: Make Configuration directory
   file:
