@@ -38,7 +38,7 @@
     - stattransfer
     - odbc
     - sublime
-    - jdk
+#    - jdk
   tasks:
     - name: Install Ultra Edit
       yum:
@@ -85,7 +85,7 @@
     - {role: python3, when: "custom_repo"}
     - {role: python3-build, when: "not custom_repo"}
     - {role: epel, when: "use_epel"}
-    - jdk
+#    - jdk
     - postgresql-client
     - r
     - r-studio-desktop
