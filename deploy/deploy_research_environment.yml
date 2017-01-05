@@ -4,7 +4,9 @@
   become_method: sudo
   roles:
     - {role: iptables, when: "iptables_config"}
-    - {role: common, when: "install_glusterfs"}
+#    - {role: common, when: "install_glusterfs"}
+    - jdk
+
   tasks:
     - name: research eod symlinks
       file:
