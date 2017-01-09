@@ -4,8 +4,7 @@
   become_method: sudo
   roles:
     - {role: iptables, when: "iptables_config"}
-#    - {role: common, when: "install_glusterfs"}
-    - jdk
+    - {role: common, when: "install_glusterfs"}
 
   tasks:
     - name: research eod symlinks
@@ -38,7 +37,7 @@
     - stattransfer
     - odbc
     - sublime
-#    - jdk
+    - jdk
   tasks:
     - name: Install Ultra Edit
       yum:
@@ -85,7 +84,7 @@
     - {role: python3, when: "custom_repo"}
     - {role: python3-build, when: "not custom_repo"}
     - {role: epel, when: "use_epel"}
-#    - jdk
+    - jdk
     - postgresql-client
     - r
     - r-studio-desktop
