@@ -6,7 +6,7 @@ nginx_listen: 80
 
 nginx_user: nginx_user
 
-nginx_version_specific: nginx-1.10.3
+nginx_version: 1.10.2
 
 nginx_dir: "/etc/nginx"
 nginx_log_dir: "/var/log/nginx"

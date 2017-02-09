@@ -5,7 +5,7 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - nginx_version_specific
+    - nginx-{{ nginx_version }}
 
 - name: Ensure Nginx is started and enabled at boot time.
   service:
