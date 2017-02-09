@@ -4,8 +4,8 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - gcc
-    - gcc-gfortran
+    - "{{ gcc }}"
+    - "{{ gcc-gfortran }}"
 
 ### Revolution R
 
@@ -34,8 +34,8 @@
     dest: {{ revolution_r_path }}/lib64/R/etc/{{ item }}
     mode: 0644
   with_items:
-    - ldpaths
-    - Makeconf
+    - "{{ ldpaths }}"
+    - "{{ Makeconf }}"
 
 ### MKL Package
 

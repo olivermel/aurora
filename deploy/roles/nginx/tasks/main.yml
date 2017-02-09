@@ -5,7 +5,7 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - nginx
+    - nginx_version_specific
 
 - name: Ensure Nginx is started and enabled at boot time.
   service:
@@ -25,5 +25,4 @@
 - name: Save rules
   command: "/sbin/service iptables save"
   when: iptables_config
-
 
