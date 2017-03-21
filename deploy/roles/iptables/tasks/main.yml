@@ -59,8 +59,9 @@
 
 - name: Allow SSH access from internal subnet
   command: "iptables -A {{ iptables_chain }} -m state --state NEW -p tcp -m tcp --dport 22 -s {{ subnet }} -j ACCEPT"
-  sudo: yes
-  when: iptables_config and is_terminal
+  become: yes
+  become_method: sudo
+  when: iptables_config and is_terminal and deploy_iptables
 
 - name: LOGDROP all others
   command: "iptables -A {{ iptables_chain }} -p all -j LOGDROP"
